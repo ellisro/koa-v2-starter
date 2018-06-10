@@ -1,12 +1,21 @@
-// Required for async/await, currently.
-require('babel-polyfill');
 
-import Koa from 'koa';
-import Router from 'koa-router';
-import bodyParser from 'koa-bodyparser';
+process.env.PORT = 5555
+const Koa = require('koa');
+const Router = require('koa-router');
+const bodyParser = require('koa-bodyparser');
 
 const app = new Koa();
 const router = new Router();
+
+var views = require('koa-views');
+
+// Must be used before any router is used
+app.use(views(__dirname + '/views', {
+  map: {
+    html: 'mustache'
+  }
+}));
+
 
 app.use(bodyParser());
 
@@ -25,12 +34,24 @@ app.use(async (ctx, next) => {
 });
 
 router.get('/', async (ctx, next) => {
-  ctx.body = {
-    message: 'Hey, welcome to the Koa v2 starter!'
-  };
-  ctx.status = 200;
-  await next();
+  await ctx.render('index', {
+    name: 'Robert'
+  });
 });
+
+router.get('/picture_upload', async (ctx, next) => {
+  await ctx.render('picture_upload', {
+   
+  });
+});
+
+
+router.post('/picture_upload_result', async (ctx, next) => {
+  await ctx.render('picture_upload_result', {
+   
+  });
+});
+
 
 app.use(router.routes());
 
