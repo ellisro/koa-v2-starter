@@ -1,8 +1,52 @@
 <!DOCTYPE HTML>
 <html>
+<head>  
+  <link rel="stylesheet" href="/style.css">
+</head>
 <body >
-    <div id="">Upload Result</div>
-    <div id="">result goes here</div>
+    <div id="">
+      <p>Upload Result</p>
+      {{#file}} 
+        <dl>
+          <div>
+            <dt>fieldname</dt>
+            <dd>{{fieldname}}</dd>
+          </div>
+          <div>
+            <dt>originalname</dt>
+            <dd>{{originalname}}</dd>
+          </div>
+          <div>
+            <dt>encoding</dt>
+            <dd>{{encoding}}</dd>
+          </div>
+          <div>
+            <dt>mimetype</dt>
+            <dd>{{mimetype}}</dd>
+          </div>
+          <div>
+            <dt>filename</dt>
+            <dd>{{filename}}</dd>
+          </div>
+          <div>
+            <dt>size</dt>
+            <dd>{{size}}</dd>
+          </div>
+        </dl> 
+      {{/file}} 
+<!--       <ul>
+        {{#file}} 
+          <li><data value="{{fieldname}}">fieldname</data></li>
+          <li><data value="{{originalname}}">originalname</data></li>
+          <li><data value="{{encoding}}">encoding</data></li>
+          <li><data value="{{mimetype}}">mimetype</data></li>
+          <li><data value="{{filename}}">filename</data></li>
+          <li><data value="{{path}}">filename</data></li>
+          <li><data value="{{size}}">size</data></li>
+        {{/file}} 
+      </ul> -->
+    </div>
     <a href="/upload_result"></a>
 </body>
 </html>
+

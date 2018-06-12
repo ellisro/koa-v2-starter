@@ -1,10 +1,13 @@
 <!DOCTYPE HTML>
 <html>
+<head>  
+  <link rel="stylesheet" href="/style.css">
+</head>
 <body >
     <div id="target">Upload</div>
-    <form action="/picture_upload_result" method="post">
+    <form action="/picture_upload_result" enctype="multipart/form-data" method="post">
         <input type="file" name="picture">
-        <input type="submit" value="upload picture now">
+        <input type="submit" value="upload picture now!">
     </form>
     <a href="/">Back to Home</a>
 </body>
