@@ -1,7 +1,7 @@
-const Document = require('./Document')
+const Model = require('./Model')
 const path = require('path')
 
-class User extends Document {
+class User extends Model {
   // static filePath = path.join(__dirname, './users.json');
   defaultListFn(item) {
     return true

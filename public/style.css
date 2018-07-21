@@ -5,3 +5,113 @@ dt, dd {
 dt::after {
   content: ": ";
 }
+
+
+.sticky-footer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.sticky-footer-content {
+  flex: 1;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/*
+* {
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui;
+}
+.grid {
+    flex-direction: row;
+    max-width: 1000px;
+}
+
+.row {
+  flex-direction: row;
+}*/
+
+
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+body, p {
+  font-size: 18px;
+  font-size: calc(16px + 1vw);
+  line-height: calc(1.1em + 0.5vw);
+  margin: .5em;
+  font-weight: 300;
+    color: #252525;
+}
+
+.flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  color: #252525;
+  font-weight: 300;
+  font-variant-ligatures: common-ligatures;
+
+}
+
+h1 {
+  font-size: calc(20px + 1.5vw);
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+
+h1, h2 {
+  font-weight: bold;
+}
+
+h1, h2, p {
+  margin: .5em 0;
+}
+
+header > div {
+  width:100%;
+  flex-direction: row;
+}
+header > div > div:first-child {
+  /*flex-grow: 1;*/
+} 
+header > div > div:last-child {
+  margin-left: auto;
+  align-items: center;
+} 
+header > div > div:last-child > div {
+  margin-left: 10px;
+} 
+
+.pure-g {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}

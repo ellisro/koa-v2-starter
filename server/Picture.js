@@ -1,6 +1,6 @@
-const Document = require('./Document')
+const Model = require('./Model')
 const path = require('path');
-class Picture extends Document {
+class Picture extends Model {
   // static filePath = path.join(__dirname, './users.json');
   defaultListFn(item) {
     return true
@@ -10,6 +10,6 @@ class Picture extends Document {
     this.email = props.email;
   }
 }
-Picture.prototype.filePath = path.join(__dirname, './users.json');
+Picture.prototype.filePath = path.join(__dirname, './pictures.json');
 
 module.exports = Picture

@@ -7,9 +7,11 @@ const fs = require('fs');
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 
+
+
 function fun() { return true }
 
-class Document { 
+class Modal { 
 
   constructor(props) {
     this.id = props.id || uuidV4();;
@@ -69,4 +71,4 @@ Document.find = function(fn) {
   })
 }
 
-module.exports = Document
+module.exports = Modal

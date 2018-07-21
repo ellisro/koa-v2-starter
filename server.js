@@ -31,7 +31,9 @@ app.use(hbs.middleware({
   viewPath: __dirname + '/views/',
   partialsPath: __dirname + '/views/partials/',
   layoutsPath: __dirname + '/views/layouts/',
-  extname: '.html'
+  defaultLayout: 'defaultLayout',
+  extname: '.html',
+  disableCache: true
 }));
 
 
@@ -44,6 +46,14 @@ app.use(serve(__dirname + '/public'));
 
 router.get('/', async (ctx, next) => {
   await ctx.render('index', { name: 'Robert' });
+});
+
+router.get('/signin', async (ctx, next) => {
+  await ctx.render('signin');
+});
+
+router.get('/editor', async (ctx, next) => {
+  await ctx.render('editor');
 });
 
 router.get('/picture_upload/:pictureId?', async (ctx, next) => {

@@ -36,8 +36,10 @@
     "koa-router": "^7.0.1",
     "koa-static": "^4.0.3",
     "koa-views": "^6.1.4",
+    "load-json-file": "^5.0.0",
     "mustache": "^2.3.0",
     "supervisor": "^0.10.0",
-    "uuid": "^3.2.1"
+    "uuid": "^3.2.1",
+    "write-json-file": "^2.3.0"
   }
 }
